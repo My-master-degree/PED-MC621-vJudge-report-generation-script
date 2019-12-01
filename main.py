@@ -83,6 +83,76 @@ order = 1
 for username in usernames:
     usernames_order[username] = order
     order += 1
+#usernames list to present
+usernames_to_present = [
+        'LuizAndia',
+        'andregoncalves',
+        'FelipeEmos',
+        'ggavena',
+        'wmartins',
+        'FerParedes',
+        'dominguilherme',
+        'guilhermehhs',
+        'anarequena',
+        'b164923',
+        '<insira username vjudge aqui>',
+        'krautz',
+        'AnaClaraZS',
+        '<insira username vjudge aqui>',
+        'brunoaf',
+        'guilhermetiaki',
+        'danieloliveira',
+        'hboschirolli',
+        '<insira username vjudge aqui>',
+        'ericoimf',
+        'Leandroafm21',
+        'gfrancioli',
+        'gabrielmsato',
+        '<insira username vjudge aqui>',
+        'giocoutinho26',
+        'mihmosa',
+        'luizguilherme',
+        'Gustavo_Salibi',
+        'natrodrigues',
+        'joaopm',
+        '<insira username vjudge aqui>',
+        'victormaruca',
+        '<insira username vjudge aqui>',
+        '<insira username vjudge aqui>',
+        '<insira username vjudge aqui>',
+        '<insira username vjudge aqui>',
+        'MarcoAurelio',
+        '<insira username vjudge aqui>',
+        'mjoaquim',
+        'barney_san',
+        'turing_burro',
+        'tiagodepalves',
+        '<insira username vjudge aqui>',
+        'VitoriaDMP',
+        '<insira username vjudge aqui>',
+        'erickkn',
+        'gabrielsantosrv',
+        '<insira username vjudge aqui>',
+        'VBS',
+        'joaoguilhermeas',
+'JoaoFlores',
+       'lumagabinov',
+       'maviles',
+       'Pupo',
+       'pedromorelli96',
+       'vitormosso',
+       'Fatayer',
+       'AlvaroMarques',
+       'beatrizazanha',
+       'Fingerman',
+       'Ieremies',
+       'Zanez',
+       '<insira username vjudge aqui>',
+       'luizgustavo09',
+       '<insira username vjudge aqui>',
+       '<insira username vjudge aqui>',
+       '<insira username vjudge aqui>'
+]
 #for each contest
 for contest in contests:
     #setup
@@ -95,7 +165,7 @@ for contest in contests:
     trs = parsed_html.body.find('table', attrs={'id': 'contest-rank-table' }).tbody.find_all('tr')
     th = 1
     for tr in trs:
-        student = {'failed': 0, 'rank': th, 'out_time': 0}
+        student = {'failed': 0, 'rank': 0, 'out_time': 0}
         contest_id = tr.get('c')
         user_id = tr.get('u')        
         if contest_id == None:
@@ -106,12 +176,11 @@ for contest in contests:
         for td in tds:
             # get name
             if td.div != None and td.div.a != None: 
-                student['user'] = td.div.a.find(text=True, recursive=False).rstrip()
+                student['user'] = td.div.a.find(text=True, recursive=False).rstrip().lower()
             # get accepted question
             classes = td.get('class')
             if 'solved' in classes:
                 student['accepteds'] = td.a.text
-            #if 'accepted' in classes and datetime.datetime.strptime(td.find(text=True, recursive=False), '%H:%M:%S').time() > ending_timestamp:
             if 'failed' in classes:
                 submissions_page = BeautifulSoup(requests.get(url = 'https://vjudge.net/contest/teamProblemStatus/'+contest_id+'?uid='+user_id+'&num='+problem_letter+'&afterContest=true', params = {}).text, from_encoding="utf-8")
                 if submissions_page.body.table.tbody.find('tr', attrs = {'class':'accepted'}) == None:
@@ -120,17 +189,34 @@ for contest in contests:
                     student['out_time'] += 1
             if 'prob' in classes:
                 problem_letter = chr(ord(problem_letter) + 1)
-
         if 'user' in student:
-            students.append(student)
-            th += 1
+            for username in usernames:
+                if student['user'] == username.lower():
+                    student['rank'] = th
+                    students.append(student)
+                    th += 1
+                    break
+    pprint(students)
     #sort values
     students.sort(key= lambda val: usernames_order[val['user']] if val['user'] in usernames_order else 10000000)
     #write csv
     with open(contest.split('/')[1] + ".csv", mode='w') as csv_file:
-        fieldnames = ['user', 'accepteds', 'failed', 'rank', 'out_time']
+        fieldnames = ['user', 'accepteds', 'out_time', 'rank', 'failed']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
-        for student in students:
-            writer.writerow(student)
-    break
+        for username_to_present in usernames_to_present:
+            row = {'user':username_to_present, 'accepteds':0, 'out_time':0, 'rank':'', 'failed':0}
+            for student in students:
+                if student['user'] == username_to_present.lower():
+                    row = student
+                    if row['rank'] == 1:
+                        row['rank'] = 'PRIMEIRO'
+                    elif row['rank'] == 2:
+                        row['rank'] = 'SEGUNDO'
+                    elif row['rank'] == 3:
+                        row['rank'] = 'TERCEIRO'
+                    else:
+                        row['rank'] = ''
+                    break
+            writer.writerow(row)
+
