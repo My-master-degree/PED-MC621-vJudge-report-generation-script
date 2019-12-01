@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://vjudge.net/contest/326056#rank -->
+<html class="gr__vjudge_net"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        MC621/MC821_13/09 - Virtual Judge
+    </title>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="keywords" content="Online Judge, vjudge, OJ, Virtual Judge, Replay Contest, ICPC, OnlineJudge, JudgeOnline, Coding, Algorithm, ç«èµ, ç®æ³, POJ, ZOJ, UVALive, SGU, URAL, HUST, SPOJ, HDU, HYSBZ, UVA, CodeForces, Z-Trening, Aizu, LightOJ, UESTC, NBUT, FZU, CSU, SCU, ACdream, CodeChef, CF::Gym, OpenJudge, Kattis, HihoCoder, HIT, HRBUST, EIJudge, AtCoder, HackerRank, 51Nod">
+<meta name="author" content="chaoshxxu">
+<meta name="robots" content="index, follow">
+
+<link rel="shortcut icon" href="./MC621_MC821_13_09 - Virtual Judge_files/logo.ico">
+<link rel="stylesheet" type="text/css" href="./MC621_MC821_13_09 - Virtual Judge_files/vendor.b9bfabcdf34079f6c48b.css">
+<link rel="stylesheet" type="text/css" href="./MC621_MC821_13_09 - Virtual Judge_files/app.04906e975817f4982d41.css">
+
+
+    <meta property="og:url" content="https://vjudge.net/contest/326056">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MC621/MC821_13/09 - Virtual Judge">
+    <meta property="og:description" content="Contest [MC621/MC821_13/09] in Virtual Judge">
+    <meta property="og:image" content="https://vjudge.net//static/images/logo.ico">
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+<body data-gr-c-s-loaded="true">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-dark bg-inverse">
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive"></button>
+    <div class="collapse navbar-toggleable-sm" id="navbarResponsive">
+        <a class="navbar-brand" href="https://vjudge.net/">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/logo.ico" height="30">
+            Home
+        </a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item" id="nav-problem">
+                <a class="nav-link" href="https://vjudge.net/problem">Problem</a>
+            </li>
+            <li class="nav-item" id="nav-status">
+                <a class="nav-link" href="https://vjudge.net/status">Status</a>
+            </li>
+            <li class="nav-item active" id="nav-contest">
+                <a class="nav-link" href="https://vjudge.net/contest">Contest</a>
+            </li>
+            <li class="nav-item" id="nav-user">
+                <a class="nav-link" href="https://vjudge.net/user">User</a>
+            </li>
+            <li class="nav-item" id="nav-group">
+                <a class="nav-link" href="https://vjudge.net/group">Group</a>
+            </li>
+            <li class="nav-item" id="nav-comment">
+                <a class="nav-link" href="https://vjudge.net/comment">Forum</a>
+            </li>
+            <li class="nav-item" id="nav-article">
+                <a class="nav-link" href="https://vjudge.net/article">Article</a>
+            </li>
+            
+            
+                
+                    <li class="nav-item float-xs-right">
+                        <a class="nav-link logout" href="javascript:void(0)">Logout</a>
+                    </li>
+                    <li class="nav-item dropdown float-xs-right">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="userNameDropdown" data-toggle="dropdown">mc521721_2019</a>
+                        <div class="dropdown-menu dropdown-menu-right user-dropdown">
+                            <a class="dropdown-item" href="https://vjudge.net/user/mc521721_2019">Profile</a>
+                            <a class="dropdown-item update-profile" href="javascript:void(0)">Update</a>
+                            <a class="dropdown-item message" href="https://vjudge.net/message">Message</a>
+                        </div>
+                    </li>
+                
+                
+            
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container" style="margin-top: 30px;">
+    
+        <div class="row alert alert-info" id="contest-announcement" style="display: none;"></div>
+    
+
+    <div class="row card" id="time-info">
+        <div class="row">
+            <div class="col-xs-3 text-xs-left">
+                <b>Begin:</b>
+                <span class="timestamp">2019-09-13 14:00 UTC-3</span>
+            </div>
+            <div class="col-xs-6 text-xs-center">
+                <h3>
+                    
+                    
+                    MC621/MC821_13/09
+                </h3>
+            </div>
+            <div class="col-xs-3 text-xs-right">
+                <b>End:</b>
+                <span class="timestamp">2019-09-13 18:00 UTC-3</span>
+            </div>
+        </div>
+        <div class="row" id="contest-time-slider-container">
+            <div class="slider slider-horizontal" id="contest-time-slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 100%;"></div><div class="slider-track-high" style="right: 0px; width: 0%;"></div><div class="slider-rangeHighlight slider-selection" style="left: 0%; width: 100%;"></div></div><div class="tooltip tooltip-main top" role="presentation" style="left: 100%; margin-left: -35px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">04:00:00</div></div><div class="tooltip tooltip-min top" role="presentation"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bottom" role="presentation" style="top: 18px;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="14400000" aria-valuenow="14400000" aria-valuetext="04:00:00" tabindex="0" style="left: 100%;"></div><div class="slider-handle max-slider-handle round hide" role="slider" aria-valuemin="0" aria-valuemax="14400000" aria-valuenow="0" aria-valuetext="00:00:00" tabindex="0" style="left: 0%;"></div></div><input id="contest-time" type="text" data-slider-id="contest-time-slider" style="display: none;" data-value="14400000" value="14400000">
+        </div>
+        <div class="row">
+            <div class="col-xs-3 text-xs-left" id="info-elapsed"></div>
+            <div class="col-xs-6 text-xs-center">
+                <span id="info-running" style="color: green;">Ended</span>
+            </div>
+            <div class="col-xs-3 text-xs-right" id="info-remaining"></div>
+        </div>
+    </div>
+
+    
+        <div class="row">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" id="contest-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="https://vjudge.net/contest/326056#overview" section="overview" role="tab" aria-expanded="false">Overview</a>
+                </li>
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="https://vjudge.net/contest/326056#problem" section="problem" role="tab">Problem</a>
+                    </li>
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="https://vjudge.net/contest/326056#status" section="status" role="tab">Status</a>
+                    </li>
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="https://vjudge.net/contest/326056#rank" section="rank" role="tab" aria-expanded="true">Rank (04:00:00)</a>
+                    </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="https://vjudge.net/contest/326056#discuss" section="discuss" role="tab" rel="#discuss" data-disqus-identifier="contest/326056">0 Comments</a>
+                </li>
+
+                <li class="text-xs-right">
+                    <div class="btn-group" role="group">
+                        
+                            <button type="button" class="btn btn-secondary" id="btn-setting">Setting</button>
+                        
+                        <button type="button" class="btn btn-secondary" id="btn-favorite"><i class="fa fa-star-o"></i>Favorite</button>
+                        
+                            <button type="button" class="btn btn-secondary" id="btn-clone">Clone</button>
+                        
+                        
+                            <button type="button" class="btn btn-secondary" id="btn-update">Update</button>
+                            <button type="button" class="btn btn-secondary" id="btn-delete">Delete</button>
+                        
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane" id="overview" role="tabpanel" aria-expanded="false">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_overview" class="container">
+
+    
+        <div class="row">
+            <table id="contest-problems" class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th class="my-stat"></th>
+                    <th class="all-stat">Stat</th>
+                    <th class="prob-num">#</th>
+                    
+                    
+                        <th>Origin</th>
+                    
+                    <th class="prob-title text-xl-left">Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//A/1/">46</a> / <a href="https://vjudge.net/contest/326056#status//A/0/">47</a></td>
+                        <td class="prob-num text-xs-center">A</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/846740/origin" target="_blank">
+                                        Kattis autori
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/A">
+                                Autori
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//B/1/">16</a> / <a href="https://vjudge.net/contest/326056#status//B/0/">40</a></td>
+                        <td class="prob-num text-xs-center">B</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/1519912/origin" target="_blank">
+                                        Kattis powers
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/B">
+                                Powers and Modulus
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//C/1/">11</a> / <a href="https://vjudge.net/contest/326056#status//C/0/">35</a></td>
+                        <td class="prob-num text-xs-center">C</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/10575/origin" target="_blank">
+                                        SPOJ ETF
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/C">
+                                Euler Totient Function
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//D/1/">28</a> / <a href="https://vjudge.net/contest/326056#status//D/0/">77</a></td>
+                        <td class="prob-num text-xs-center">D</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/2523753/origin" target="_blank">
+                                        Gym 102267B
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/D">
+                                Primes
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//E/1/">31</a> / <a href="https://vjudge.net/contest/326056#status//E/0/">50</a></td>
+                        <td class="prob-num text-xs-center">E</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/99013/origin" target="_blank">
+                                        SPOJ SBANK
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/E">
+                                Sorting Bank Accounts
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//F/1/">2</a> / <a href="https://vjudge.net/contest/326056#status//F/0/">5</a></td>
+                        <td class="prob-num text-xs-center">F</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/35850/origin" target="_blank">
+                                        UVA 944
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/F">
+                                Happy Numbers
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//G/1/">44</a> / <a href="https://vjudge.net/contest/326056#status//G/0/">79</a></td>
+                        <td class="prob-num text-xs-center">G</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/19117/origin" target="_blank">
+                                        UVA 621
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/G">
+                                Secret Research
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//H/1/">2</a> / <a href="https://vjudge.net/contest/326056#status//H/0/">14</a></td>
+                        <td class="prob-num text-xs-center">H</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/858227/origin" target="_blank">
+                                        SPOJ PFACT
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/H">
+                                Prime Factors
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//I/1/">2</a> / <a href="https://vjudge.net/contest/326056#status//I/0/">9</a></td>
+                        <td class="prob-num text-xs-center">I</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/1869377/origin" target="_blank">
+                                        EOlymp 1244
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/I">
+                                GCD and LCM
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"><a href="https://vjudge.net/contest/326056#status//J/1/">11</a> / <a href="https://vjudge.net/contest/326056#status//J/0/">24</a></td>
+                        <td class="prob-num text-xs-center">J</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/94543/origin" target="_blank">
+                                        CodeForces 495B
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/J">
+                                Modular Equations
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"></td>
+                        <td class="prob-num text-xs-center">K</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/360720/origin" target="_blank">
+                                        SPOJ ETFD
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/K">
+                                Euler Totient Function Depth
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat"></td>
+                        <td class="prob-num text-xs-center">L</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="https://vjudge.net/problem/28523/origin" target="_blank">
+                                        SPOJ INCARDS
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="https://vjudge.net/contest/326056#problem/L">
+                                Invitation Cards
+                            </a>
+                        </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    
+
+    <div class="row text-xs-right" id="contest-manager"><span style="color:red">Private</span>. Prepared by <a href="https://vjudge.net/user/mc521721_2019" target="_blank">mc521721_2019</a>, 2019-09-13 13:00:28
+        <div class="fb-like fb_iframe_widget" data-href="https://vjudge.net/contest/326056" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=1140&amp;href=https%3A%2F%2Fvjudge.net%2Fcontest%2F326056&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f1ffc340adc8dec" width="1000px" height="1000px" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./MC621_MC821_13_09 - Virtual Judge_files/like.html" style="border: none; visibility: visible; width: 0px; height: 0px;" class=""></iframe></span></div>
+    </div>
+
+    <div class="row card" id="contest-description" style="display: none"></div>
+
+</div>
+
+                </div>
+                
+                    <div class="tab-pane" id="problem" role="tabpanel">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_problem" class="container">
+    <div class="row">
+        <div class="col-md-3 container" id="prob-left-panel">
+            <ul class="nav nav-pills row" id="problem-nav">
+                
+                    <li class="nav-item">
+                        <a num="A" class="nav-link" href="https://vjudge.net/contest/326056#problem/A">A</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="B" class="nav-link" href="https://vjudge.net/contest/326056#problem/B">B</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="C" class="nav-link" href="https://vjudge.net/contest/326056#problem/C">C</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="D" class="nav-link" href="https://vjudge.net/contest/326056#problem/D">D</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="E" class="nav-link" href="https://vjudge.net/contest/326056#problem/E">E</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="F" class="nav-link" href="https://vjudge.net/contest/326056#problem/F">F</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="G" class="nav-link" href="https://vjudge.net/contest/326056#problem/G">G</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="H" class="nav-link" href="https://vjudge.net/contest/326056#problem/H">H</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="I" class="nav-link" href="https://vjudge.net/contest/326056#problem/I">I</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="J" class="nav-link" href="https://vjudge.net/contest/326056#problem/J">J</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="K" class="nav-link" href="https://vjudge.net/contest/326056#problem/K">K</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="L" class="nav-link" href="https://vjudge.net/contest/326056#problem/L">L</a>
+                    </li>
+                
+            </ul>
+
+            <div class="alert alert-danger row" role="alert" id="prob-alert" style="display: none"></div>
+
+            <div id="prob-operation" class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" class="btn btn-primary" id="problem-submit">Submit</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="https://vjudge.net/contest/326056#status//A/0/CPP" class="btn btn-secondary" id="btn-contest-status">Status</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="https://vjudge.net/contest/326056#status/Isun/A/0/CPP" class="btn btn-secondary" id="btn-contest-my-status">My
+                                Status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="prob-properties" class="row">
+                <div class="container">
+                    <dl class="card row"></dl>
+                </div>
+            </div>
+
+            <div id="prob-descriptions" class="row">
+                <span>Choose a description for participants:</span>
+                <div class="list-group" id="prob-descs"></div>
+            </div>
+        </div>
+        <div class="col-md-9 container" id="prob-right-panel">
+            <div class="row">
+                <div id="prob-title-contest">
+                    <h2 id="problem-title"></h2>
+                    <span class="origin">
+                        <a id="problem-origin" href="https://vjudge.net/contest/326056#" target="_blank"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="row" id="frame-description-container"></div>
+        </div>
+    </div>
+
+</div>
+
+                    </div>
+                
+                
+                    <div class="tab-pane" id="status" role="tabpanel">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_status" class="container">
+    <div class="row" id="right-panel">
+        <table id="listStatus" class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th class="run-id hidden-lg-down">Run ID</th>
+                <th class="username">
+                    Username<br>
+                    <input type="text" id="un" name="un" class="search_text" style="width:100%">
+                </th>
+                <th class="num">
+                    Prob<br>
+                    <select id="contest-status-num" name="num" class="custom-select">
+                        <option value="-">All</option>
+                    </select>
+                </th>
+                <th class="status">
+                    Result
+                    <br>
+                    <select id="res" name="res" class="custom-select">
+                        <option value="0">All</option>
+                        <option value="1">Accepted</option>
+                        <option value="2">Presentation Error</option>
+                        <option value="3">Wrong Answer</option>
+                        <option value="4">Time Limit Exceed</option>
+                        <option value="5">Memory Limit Exceed</option>
+                        <option value="6">Output Limit Exceed</option>
+                        <option value="7">Runtime Error</option>
+                        <option value="8">Compile Error</option>
+                        <option value="9">Unknown Error</option>
+                        <option value="10">Submit Error</option>
+                        <option value="11">Queuing &amp;&amp; Judging</option>
+                    </select>
+                </th>
+                <th class="runtime">Time<br>(ms)</th>
+                <th class="memory">Mem<br>(MB)</th>
+                <th class="length hidden-lg-down">Length</th>
+                <th class="language">
+                    Lang
+                    <br>
+                    <select name="language" id="language" class="custom-select">
+                        <option value="">All</option>
+                        <option value="CPP">C++</option>
+                        <option value="C">C</option>
+                        <option value="JAVA">Java</option>
+                        <option value="PASCAL">Pascal</option>
+                        <option value="PYTHON">Python</option>
+                        <option value="CSHARP">C#</option>
+                        <option value="RUBY">Ruby</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </th>
+                <th class="date">Submit Time</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <input type="button" class="btn btn-secondary btn-md" id="rejudge-all" value="Rejudge" style="display: none">
+        <input type="button" class="btn btn-secondary btn-md" id="reset" value="Reset" style="display: none">
+        <input type="button" class="btn btn-secondary btn-md" id="filter" value="Filter" style="display: none">
+    </div>
+</div>
+
+                    </div>
+                
+                
+                    <div class="tab-pane active" id="rank" role="tabpanel" aria-expanded="true">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_rank">
+
+    <table id="contest-rank-table" cellspacing="1" style="width: 100%;"><thead id="rank-table-header" style="position: fixed; top: 0px; display: none; left: 105.5px; width: 1337px;"><tr>   <th class="rank" rowspan="2"><div>Rank</div></th>   <th class="team" rowspan="2"><div>Team</div></th>   <th class="solve" rowspan="2"><div>Score</div></th>   <th class="penalty" rowspan="2"><div>Penalty</div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/A">A</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/B">B</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/C">C</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/D">D</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/E">E</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/F">F</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/G">G</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/H">H</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/I">I</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/J">J</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/K">K</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/L">L</a></div></th></tr><tr><th class="prob undefined"><div>46 / 47</div></th><th class="prob undefined"><div>16 / 40</div></th><th class="prob undefined"><div>11 / 35</div></th><th class="prob undefined"><div>28 / 77</div></th><th class="prob undefined"><div>31 / 50</div></th><th class="prob undefined"><div>2 / 5</div></th><th class="prob undefined"><div>44 / 79</div></th><th class="prob undefined"><div>2 / 14</div></th><th class="prob undefined"><div>2 / 9</div></th><th class="prob undefined"><div>11 / 24</div></th><th class="prob undefined"><div>0 / 0</div></th><th class="prob undefined"><div>0 / 0</div></th></tr></thead><thead><tr>   <th class="rank" rowspan="2"><div>Rank</div></th>   <th class="team" rowspan="2"><div>Team</div></th>   <th class="solve" rowspan="2"><div>Score</div></th>   <th class="penalty" rowspan="2"><div>Penalty</div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/A">A</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/B">B</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/C">C</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/D">D</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/E">E</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/F">F</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/G">G</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/H">H</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/I">I</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/J">J</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/K">K</a></div></th><th class="prob undefined"><div><a href="https://vjudge.net/contest/326056#problem/L">L</a></div></th></tr><tr><th class="prob undefined"><div>46 / 47</div></th><th class="prob undefined"><div>16 / 40</div></th><th class="prob undefined"><div>11 / 35</div></th><th class="prob undefined"><div>28 / 77</div></th><th class="prob undefined"><div>31 / 50</div></th><th class="prob undefined"><div>2 / 5</div></th><th class="prob undefined"><div>44 / 79</div></th><th class="prob undefined"><div>2 / 14</div></th><th class="prob undefined"><div>2 / 9</div></th><th class="prob undefined"><div>11 / 24</div></th><th class="prob undefined"><div>0 / 0</div></th><th class="prob undefined"><div>0 / 0</div></th></tr></thead><tbody><tr c="326056" u="253243" class="this "><td class="rank meta">1</td><td class="team meta"><div><a href="https://vjudge.net/user/joaopm" target="_blank">joaopm <span style="color:gray">(joaopm)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/joaopm/-/0/">7</a></td><td class="penalty meta">   <span class="minute">802</span>   <span class="hms">13:22:41</span></td><td class="prob accepted">00:34:20<br>&nbsp;</td><td class="prob accepted">02:40:49<br> <span>(-3)</span></td><td class="prob accepted fb">01:23:47<br>&nbsp;</td><td class="prob accepted">01:13:38<br> <span>(-3)</span></td><td class="prob accepted">01:45:44<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted fb">00:09:12<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:35:11<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="294466" class="this "><td class="rank meta">2</td><td class="team meta"><div><a href="https://vjudge.net/user/Fingerman" target="_blank">Fingerman <span style="color:gray">(Fingerman)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/Fingerman/-/0/">7</a></td><td class="penalty meta">   <span class="minute">837</span>   <span class="hms">13:57:16</span></td><td class="prob accepted">00:05:36<br>&nbsp;</td><td class="prob accepted">01:34:06<br>&nbsp;</td><td class="prob accepted">02:46:12<br> <span>(-1)</span></td><td class="prob accepted">01:24:18<br>&nbsp;</td><td class="prob accepted">01:23:12<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:54:19<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:49:33<br> <span>(-5)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276476" class="this "><td class="rank meta">3</td><td class="team meta"><div><a href="https://vjudge.net/user/AnaClaraZS" target="_blank">AnaClaraZS <span style="color:gray">(AnaClaraZS)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/AnaClaraZS/-/0/">7</a></td><td class="penalty meta">   <span class="minute">884</span>   <span class="hms">14:44:53</span></td><td class="prob accepted">00:09:58<br>&nbsp;</td><td class="prob accepted">01:18:09<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob accepted">01:45:34<br> <span>(-1)</span></td><td class="prob accepted">02:51:22<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:36:04<br>&nbsp;</td><td class="prob accepted">03:58:36<br> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">02:25:10<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276500" class="this "><td class="rank meta">4</td><td class="team meta"><div><a href="https://vjudge.net/user/LuizAndia" target="_blank">LuizAndia <span style="color:gray">(Luiz)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/LuizAndia/-/0/">7</a></td><td class="penalty meta">   <span class="minute">890</span>   <span class="hms">14:50:30</span></td><td class="prob accepted">00:21:44<br>&nbsp;</td><td class="prob failed"> <span>(-3)</span></td><td class="prob accepted">02:06:32<br> <span>(-2)</span></td><td class="prob accepted">00:47:45<br> <span>(-1)</span></td><td class="prob accepted">01:18:13<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:17:27<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:41:12<br> <span>(-4)</span></td><td class="prob accepted">03:57:37<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276496" class="this "><td class="rank meta">5</td><td class="team meta"><div><a href="https://vjudge.net/user/Ieremies" target="_blank">Ieremies <span style="color:gray">(Ieremies)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/Ieremies/-/0/">6</a></td><td class="penalty meta">   <span class="minute">454</span>   <span class="hms">07:34:28</span></td><td class="prob accepted">00:18:15<br>&nbsp;</td><td class="prob accepted">01:22:25<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob accepted fb">00:29:59<br>&nbsp;</td><td class="prob accepted">00:51:48<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:41:26<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:10:35<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276516" class="this "><td class="rank meta">6</td><td class="team meta"><div><a href="https://vjudge.net/user/Fatayer" target="_blank">Fatayer <span style="color:gray">(Fatayer)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/Fatayer/-/0/">6</a></td><td class="penalty meta">   <span class="minute">572</span>   <span class="hms">09:32:01</span></td><td class="prob accepted">00:09:58<br>&nbsp;</td><td class="prob accepted fb">00:44:44<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:26:42<br> <span>(-2)</span></td><td class="prob accepted">01:11:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:19:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:38:55<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="286739" class="this "><td class="rank meta">7</td><td class="team meta"><div><a href="https://vjudge.net/user/luizgustavo09" target="_blank">luizgustavo09 <span style="color:gray">(Will Smitho)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/luizgustavo09/-/0/">6</a></td><td class="penalty meta">   <span class="minute">672</span>   <span class="hms">11:12:06</span></td><td class="prob accepted">00:10:48<br>&nbsp;</td><td class="prob accepted">02:13:43<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:54:36<br> <span>(-1)</span></td><td class="prob accepted">01:46:06<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:17:55<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:08:58<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="313164" class="this "><td class="rank meta">8</td><td class="team meta"><div><a href="https://vjudge.net/user/gabrielsantosrv" target="_blank">gabrielsantosrv <span style="color:gray">(Biel)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/gabrielsantosrv/-/0/">6</a></td><td class="penalty meta">   <span class="minute">739</span>   <span class="hms">12:19:30</span></td><td class="prob accepted">00:07:51<br>&nbsp;</td><td class="prob accepted">02:35:22<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:50:01<br> <span>(-3)</span></td><td class="prob accepted">02:20:41<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">00:22:47<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">03:22:48<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276488" class="this "><td class="rank meta">9</td><td class="team meta"><div><a href="https://vjudge.net/user/maviles" target="_blank">maviles <span style="color:gray">(maviles)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/maviles/-/0/">6</a></td><td class="penalty meta">   <span class="minute">754</span>   <span class="hms">12:34:05</span></td><td class="prob accepted">00:05:29<br>&nbsp;</td><td class="prob accepted">01:36:39<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">02:12:55<br>&nbsp;</td><td class="prob accepted">03:12:23<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:36:44<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:49:55<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="253246" class="this "><td class="rank meta">10</td><td class="team meta"><div><a href="https://vjudge.net/user/turing_burro" target="_blank">turing_burro <span style="color:gray">(Nicolas)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/turing_burro/-/0/">6</a></td><td class="penalty meta">   <span class="minute">755</span>   <span class="hms">12:35:34</span></td><td class="prob accepted">01:16:37<br>&nbsp;</td><td class="prob accepted">03:49:21<br> <span>(-2)</span></td><td class="prob accepted">02:04:07<br>&nbsp;</td><td class="prob accepted">01:49:37<br>&nbsp;</td><td class="prob accepted">01:34:21<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:21:31<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276491" class="this "><td class="rank meta">11</td><td class="team meta"><div><a href="https://vjudge.net/user/pedromorelli96" target="_blank">pedromorelli96 <span style="color:gray">(pedromorelli96)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/pedromorelli96/-/0/">6</a></td><td class="penalty meta">   <span class="minute">769</span>   <span class="hms">12:49:54</span></td><td class="prob accepted fb">00:04:58<br>&nbsp;</td><td class="prob accepted">01:42:10<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">02:28:55<br>&nbsp;</td><td class="prob accepted">03:26:30<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:52:43<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:54:38<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312433" class="this "><td class="rank meta">12</td><td class="team meta"><div><a href="https://vjudge.net/user/Zanez" target="_blank">Zanez <span style="color:gray">(Zanez)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/Zanez/-/0/">6</a></td><td class="penalty meta">   <span class="minute">1010</span>   <span class="hms">16:50:25</span></td><td class="prob accepted">00:21:32<br>&nbsp;</td><td class="prob accepted">02:26:53<br>&nbsp;</td><td class="prob accepted">03:37:52<br>&nbsp;</td><td class="prob accepted">02:46:08<br> <span>(-4)</span></td><td class="prob accepted">03:17:08<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">01:20:52<br> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312410" class="this "><td class="rank meta">13</td><td class="team meta"><div><a href="https://vjudge.net/user/joaoguilhermeas" target="_blank">joaoguilhermeas <span style="color:gray">(Joao Guilherme)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/joaoguilhermeas/-/0/">6</a></td><td class="penalty meta">   <span class="minute">1060</span>   <span class="hms">17:40:34</span></td><td class="prob accepted">00:32:20<br>&nbsp;</td><td class="prob accepted">02:54:06<br>&nbsp;</td><td class="prob accepted">03:36:59<br> <span>(-3)</span></td><td class="prob accepted">02:35:00<br>&nbsp;</td><td class="prob accepted">03:25:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:56:16<br> <span>(-5)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="278815" class="this "><td class="rank meta">14</td><td class="team meta"><div><a href="https://vjudge.net/user/barney_san" target="_blank">barney_san <span style="color:gray">(barney_san)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/barney_san/-/0/">5</a></td><td class="penalty meta">   <span class="minute">380</span>   <span class="hms">06:20:44</span></td><td class="prob accepted">00:10:17<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob failed"> <span>(-1)</span></td><td class="prob accepted">01:55:59<br>&nbsp;</td><td class="prob accepted fb">00:47:39<br> <span>(-1)</span></td><td class="prob accepted">02:21:37<br> <span>(-1)</span></td><td class="prob accepted">00:25:12<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="315537" class="this "><td class="rank meta">15</td><td class="team meta"><div><a href="https://vjudge.net/user/hboschirolli" target="_blank">hboschirolli <span style="color:gray">(heitor.boschirolli)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/hboschirolli/-/0/">5</a></td><td class="penalty meta">   <span class="minute">392</span>   <span class="hms">06:32:23</span></td><td class="prob accepted">00:29:24<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:26:56<br>&nbsp;</td><td class="prob accepted">01:11:21<br>&nbsp;</td><td class="prob accepted">01:33:07<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:51:35<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312427" class="this "><td class="rank meta">16</td><td class="team meta"><div><a href="https://vjudge.net/user/krautz" target="_blank">krautz <span style="color:gray">(krautzera)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/krautz/-/0/">5</a></td><td class="penalty meta">   <span class="minute">410</span>   <span class="hms">06:50:29</span></td><td class="prob accepted">00:31:10<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:26:48<br> <span>(-1)</span></td><td class="prob accepted">01:08:33<br>&nbsp;</td><td class="prob accepted">01:33:02<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:50:56<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="299787" class="this "><td class="rank meta">17</td><td class="team meta"><div><a href="https://vjudge.net/user/henriquesimoes" target="_blank">henriquesimoes <span style="color:gray">(Henrique)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/henriquesimoes/-/0/">5</a></td><td class="penalty meta">   <span class="minute">661</span>   <span class="hms">11:01:16</span></td><td class="prob accepted">01:00:04<br>&nbsp;</td><td class="prob accepted">03:43:21<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:47:24<br>&nbsp;</td><td class="prob accepted">03:08:07<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:22:20<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312515" class="this "><td class="rank meta">18</td><td class="team meta"><div><a href="https://vjudge.net/user/Gustavo_Salibi" target="_blank">Gustavo_Salibi <span style="color:gray">(salibi)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/Gustavo_Salibi/-/0/">5</a></td><td class="penalty meta">   <span class="minute">733</span>   <span class="hms">12:13:38</span></td><td class="prob accepted">00:24:47<br>&nbsp;</td><td class="prob accepted">03:35:17<br> <span>(-8)</span></td><td class="prob failed"> <span>(-3)</span></td><td class="prob accepted">01:34:10<br> <span>(-4)</span></td><td class="prob accepted">01:59:26<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:39:58<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312435" class="this "><td class="rank meta">19</td><td class="team meta"><div><a href="https://vjudge.net/user/b164923" target="_blank">b164923 <span style="color:gray">(Bianca)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/b164923/-/0/">5</a></td><td class="penalty meta">   <span class="minute">820</span>   <span class="hms">13:40:47</span></td><td class="prob accepted">00:13:30<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:43:49<br>&nbsp;</td><td class="prob accepted">01:52:43<br> <span>(-4)</span></td><td class="prob accepted">03:54:31<br> <span>(-6)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">00:36:14<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312420" class="this "><td class="rank meta">20</td><td class="team meta"><div><a href="https://vjudge.net/user/pupo" target="_blank">pupo <span style="color:gray">(pupo)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/pupo/-/0/">4</a></td><td class="penalty meta">   <span class="minute">309</span>   <span class="hms">05:09:36</span></td><td class="prob accepted">00:18:19<br>&nbsp;</td><td class="prob accepted">01:37:20<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:41:59<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:31:58<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312437" class="this "><td class="rank meta">21</td><td class="team meta"><div><a href="https://vjudge.net/user/guilhermetiaki" target="_blank">guilhermetiaki <span style="color:gray">(Guilherme Sato)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/guilhermetiaki/-/0/">4</a></td><td class="penalty meta">   <span class="minute">316</span>   <span class="hms">05:16:02</span></td><td class="prob accepted">00:06:22<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:36:02<br> <span>(-2)</span></td><td class="prob accepted">02:06:02<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:47:36<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312455" class="this "><td class="rank meta">22</td><td class="team meta"><div><a href="https://vjudge.net/user/lumagabinov" target="_blank">lumagabinov <span style="color:gray">(lumagabinov)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/lumagabinov/-/0/">4</a></td><td class="penalty meta">   <span class="minute">337</span>   <span class="hms">05:37:49</span></td><td class="prob accepted">00:24:31<br>&nbsp;</td><td class="prob accepted">02:39:32<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:33:17<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:40:29<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312445" class="this "><td class="rank meta">23</td><td class="team meta"><div><a href="https://vjudge.net/user/luizguilherme" target="_blank">luizguilherme <span style="color:gray">(luizguilhermexd)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/luizguilherme/-/0/">4</a></td><td class="penalty meta">   <span class="minute">400</span>   <span class="hms">06:40:39</span></td><td class="prob accepted">00:58:28<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:32:26<br> <span>(-1)</span></td><td class="prob accepted">01:35:28<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:14:17<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="314500" class="this "><td class="rank meta">24</td><td class="team meta"><div><a href="https://vjudge.net/user/wmartins" target="_blank">wmartins <span style="color:gray">(wmartins)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/wmartins/-/0/">4</a></td><td class="penalty meta">   <span class="minute">462</span>   <span class="hms">07:42:09</span></td><td class="prob accepted">00:22:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-4)</span></td><td class="prob accepted">01:56:47<br>&nbsp;</td><td class="prob accepted">02:12:50<br> <span>(-5)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">01:29:39<br>&nbsp;</td><td class="prob failed"> <span>(-5)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276511" class="this "><td class="rank meta">25</td><td class="team meta"><div><a href="https://vjudge.net/user/VitoriaDMP" target="_blank">VitoriaDMP <span style="color:gray">(Vitoria)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/VitoriaDMP/-/0/">4</a></td><td class="penalty meta">   <span class="minute">473</span>   <span class="hms">07:53:08</span></td><td class="prob accepted">00:16:28<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:16:19<br> <span>(-2)</span></td><td class="prob accepted">03:40:32<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:59:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276507" class="this "><td class="rank meta">26</td><td class="team meta"><div><a href="https://vjudge.net/user/guilhermehhs" target="_blank">guilhermehhs <span style="color:gray">(Guilherme Higa)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/guilhermehhs/-/0/">4</a></td><td class="penalty meta">   <span class="minute">485</span>   <span class="hms">08:05:45</span></td><td class="prob accepted">01:25:47<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-4)</span></td><td class="prob accepted">02:40:55<br> <span>(-1)</span></td><td class="prob accepted">02:04:40<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:34:23<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312448" class="this "><td class="rank meta">27</td><td class="team meta"><div><a href="https://vjudge.net/user/Leandroafm21" target="_blank">Leandroafm21 <span style="color:gray">(Leandro)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/Leandroafm21/-/0/">4</a></td><td class="penalty meta">   <span class="minute">490</span>   <span class="hms">08:10:23</span></td><td class="prob accepted">00:24:15<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:49:32<br> <span>(-3)</span></td><td class="prob accepted">03:46:39<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:49:57<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312444" class="this "><td class="rank meta">28</td><td class="team meta"><div><a href="https://vjudge.net/user/beatrizazanha" target="_blank">beatrizazanha <span style="color:gray">(Beatriz)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/beatrizazanha/-/0/">4</a></td><td class="penalty meta">   <span class="minute">552</span>   <span class="hms">09:12:58</span></td><td class="prob accepted">00:18:23<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:53:28<br> <span>(-3)</span></td><td class="prob accepted">03:39:26<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">00:41:41<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="255374" class="this "><td class="rank meta">29</td><td class="team meta"><div><a href="https://vjudge.net/user/ErickMonteiro" target="_blank">ErickMonteiro <span style="color:gray">(Dranoel321)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/ErickMonteiro/-/0/">4</a></td><td class="penalty meta">   <span class="minute">609</span>   <span class="hms">10:09:56</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted fb">01:39:25<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted fb">02:10:04<br>&nbsp;</td><td class="prob accepted fb">01:54:24<br> <span>(-3)</span></td><td class="prob accepted fb">02:06:03<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="315539" class="this "><td class="rank meta">30</td><td class="team meta"><div><a href="https://vjudge.net/user/JoaoFlores" target="_blank">JoaoFlores <span style="color:gray">(JoaoFlores)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/JoaoFlores/-/0/">3</a></td><td class="penalty meta">   <span class="minute">170</span>   <span class="hms">02:50:30</span></td><td class="prob accepted">00:29:43<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob accepted">01:43:28<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:37:19<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312430" class="this "><td class="rank meta">31</td><td class="team meta"><div><a href="https://vjudge.net/user/VBS" target="_blank">VBS <span style="color:gray">(gustavovbs)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/VBS/-/0/">3</a></td><td class="penalty meta">   <span class="minute">174</span>   <span class="hms">02:54:43</span></td><td class="prob accepted">00:25:40<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:25:02<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:44:01<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312436" class="this "><td class="rank meta">32</td><td class="team meta"><div><a href="https://vjudge.net/user/mihmosa" target="_blank">mihmosa <span style="color:gray">(Mihmosa)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/mihmosa/-/0/">3</a></td><td class="penalty meta">   <span class="minute">258</span>   <span class="hms">04:18:16</span></td><td class="prob accepted">00:11:18<br>&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob accepted">03:42:43<br>&nbsp;</td><td class="prob failed"> <span>(-9)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:24:15<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312431" class="this "><td class="rank meta">33</td><td class="team meta"><div><a href="https://vjudge.net/user/vitormosso" target="_blank">vitormosso <span style="color:gray">(vitormosso)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/vitormosso/-/0/">3</a></td><td class="penalty meta">   <span class="minute">327</span>   <span class="hms">05:27:51</span></td><td class="prob accepted">00:26:20<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:46:48<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">00:54:43<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="309553" class="this "><td class="rank meta">34</td><td class="team meta"><div><a href="https://vjudge.net/user/MarcoAurelio" target="_blank">MarcoAurelio <span style="color:gray">(Marco Aurélio)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/MarcoAurelio/-/0/">3</a></td><td class="penalty meta">   <span class="minute">344</span>   <span class="hms">05:44:48</span></td><td class="prob accepted">00:28:45<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:00:44<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:55:19<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="277988" class="this "><td class="rank meta">35</td><td class="team meta"><div><a href="https://vjudge.net/user/andregoncalves" target="_blank">andregoncalves <span style="color:gray">(André Gonçalves)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/andregoncalves/-/0/">3</a></td><td class="penalty meta">   <span class="minute">419</span>   <span class="hms">06:59:07</span></td><td class="prob accepted">01:37:05<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:25:05<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">01:56:57<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="315543" class="this "><td class="rank meta">36</td><td class="team meta"><div><a href="https://vjudge.net/user/erickkn" target="_blank">erickkn <span style="color:gray">(Erick K)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/erickkn/-/0/">3</a></td><td class="penalty meta">   <span class="minute">459</span>   <span class="hms">07:39:44</span></td><td class="prob accepted">01:55:54<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:09:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:33:57<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="313176" class="this "><td class="rank meta">37</td><td class="team meta"><div><a href="https://vjudge.net/user/danieloliveira" target="_blank">danieloliveira <span style="color:gray">(otario123)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/danieloliveira/-/0/">2</a></td><td class="penalty meta">   <span class="minute">79</span>   <span class="hms">01:19:16</span></td><td class="prob accepted">00:34:21<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:44:55<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="313178" class="this "><td class="rank meta">38</td><td class="team meta"><div><a href="https://vjudge.net/user/AlvaroMarques" target="_blank">AlvaroMarques <span style="color:gray">(AlvaroMarx)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/AlvaroMarques/-/0/">2</a></td><td class="penalty meta">   <span class="minute">111</span>   <span class="hms">01:51:47</span></td><td class="prob accepted">00:06:44<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:25:03<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312428" class="this "><td class="rank meta">39</td><td class="team meta"><div><a href="https://vjudge.net/user/anarequena" target="_blank">anarequena <span style="color:gray">(Ana)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/anarequena/-/0/">2</a></td><td class="penalty meta">   <span class="minute">199</span>   <span class="hms">03:19:42</span></td><td class="prob accepted">00:16:42<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:23:00<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312424" class="this "><td class="rank meta">40</td><td class="team meta"><div><a href="https://vjudge.net/user/mjoaquim" target="_blank">mjoaquim <span style="color:gray">(mjoaquim)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/mjoaquim/-/0/">2</a></td><td class="penalty meta">   <span class="minute">210</span>   <span class="hms">03:30:31</span></td><td class="prob accepted">00:24:33<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">01:45:58<br> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312429" class="this "><td class="rank meta">41</td><td class="team meta"><div><a href="https://vjudge.net/user/giocoutinho26" target="_blank">giocoutinho26 <span style="color:gray">(giocoutinho)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/giocoutinho26/-/0/">2</a></td><td class="penalty meta">   <span class="minute">218</span>   <span class="hms">03:38:34</span></td><td class="prob accepted">00:24:36<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">00:53:58<br> <span>(-7)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="315536" class="this "><td class="rank meta">42</td><td class="team meta"><div><a href="https://vjudge.net/user/gfrancioli" target="_blank">gfrancioli <span style="color:gray">(Gabriel)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/gfrancioli/-/0/">2</a></td><td class="penalty meta">   <span class="minute">248</span>   <span class="hms">04:08:39</span></td><td class="prob accepted">00:43:26<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:25:13<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312453" class="this "><td class="rank meta">43</td><td class="team meta"><div><a href="https://vjudge.net/user/LadyZizi" target="_blank">LadyZizi <span style="color:gray">(LadyZizi)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/LadyZizi/-/0/">2</a></td><td class="penalty meta">   <span class="minute">257</span>   <span class="hms">04:17:32</span></td><td class="prob accepted">01:31:01<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:06:31<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="276525" class="this "><td class="rank meta">44</td><td class="team meta"><div><a href="https://vjudge.net/user/FerParedes" target="_blank">FerParedes <span style="color:gray">(Paredes)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/FerParedes/-/0/">2</a></td><td class="penalty meta">   <span class="minute">325</span>   <span class="hms">05:25:28</span></td><td class="prob accepted">02:26:42<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">02:58:46<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312438" class="this "><td class="rank meta">45</td><td class="team meta"><div><a href="https://vjudge.net/user/brunoaf" target="_blank">brunoaf <span style="color:gray">(bruno_arnoni)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/brunoaf/-/0/">2</a></td><td class="penalty meta">   <span class="minute">330</span>   <span class="hms">05:30:42</span></td><td class="prob accepted">02:23:33<br>&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob failed"> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">03:07:09<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="312450" class="this "><td class="rank meta">46</td><td class="team meta"><div><a href="https://vjudge.net/user/victormaruca" target="_blank">victormaruca <span style="color:gray">(maruca)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/victormaruca/-/0/">1</a></td><td class="penalty meta">   <span class="minute">58</span>   <span class="hms">00:58:50</span></td><td class="prob accepted">00:58:50<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr><tr c="326056" u="277996" class="this "><td class="rank meta">47</td><td class="team meta"><div><a href="https://vjudge.net/user/FelipeEmos" target="_blank">FelipeEmos <span style="color:gray">(FelipeEmos)</span></a></div></td><td class="solved meta"><a href="https://vjudge.net/contest/326056#status/FelipeEmos/-/0/">1</a></td><td class="penalty meta">   <span class="minute">64</span>   <span class="hms">01:04:41</span></td><td class="prob accepted">01:04:41<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr></tbody></table>
+    <table id="contest-rank-table-export"></table>
+
+    <div class="rank_tool">
+        <img src="./MC621_MC821_13_09 - Virtual Judge_files/find_me.png" id="img_find_me" title="Find me" height="55" style="visibility: hidden;">
+    </div>
+
+</div>
+
+                    </div>
+                
+                <div class="tab-pane" id="discuss" role="tabpanel">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_discuss"><div class="comment-posts-container"><div class="comment-edit">
+        <textarea class="form-control edit" name="content" rows="6" placeholder="Comment in Markdown"></textarea>
+        <div class="comment-error alert-danger" style="display: none; padding: 20px"></div>
+        <div class="preview">
+            <span>Preview:</span><br>
+            <div class="preview-content" style="display: none;"></div>
+            <div class="buttons">
+                <button class="btn btn-primary save" style="display: none">Save</button>
+                
+                <button class="btn btn-secondary post">Post</button>
+                <button class="btn btn-secondary cancel">Clear</button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="comment-posts"></div>
+
+    
+
+</div></div>
+
+                </div>
+            </div>
+
+            <div class="rank_tool">
+                <span id="img_go_top" title="Go to top"></span>
+            </div>
+        </div>
+    
+    
+
+</div>
+
+<textarea style="display: none" name="dataJson">{"id":326056,"title":"MC621/MC821_13/09","type":0,"openness":2,"authStatus":3,"begin":1568394000000,"end":1568408400000,"createTime":1568390428000,"started":true,"ended":true,"managerId":276477,"managerName":"mc521721_2019","fav":false,"description":{"format":"MD","content":""},"announcement":"","problems":[{"pid":846740,"title":"Autori","oj":"Kattis","probNum":"autori","num":"A","publicDescId":81457,"publicDescVersion":1574844005000,"allDescBriefs":[{"id":81457,"updateDate":"2019-11-27","version":1574844005000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"1000 ms","Memory limit":"1048576 kB","OS":"Linux","Source":" \u003ca href\u003d\"https://open.kattis.com/problem-sources/Croatian%20Open%20Competition%20in%20Informatics%202009/2010%2C%20contest%20%234\"\u003eCroatian Open Competition in Informatics 2009/2010, contest #4\u003c/a\u003e","Author":" \u003ca href\u003d\"https://open.kattis.com/problem-authors/Marko%20Ivankovi%C4%87\"\u003eMarko Ivanković\u003c/a\u003e","License":" For educational use only"},"weight":1},{"pid":1519912,"title":"Powers and Modulus","oj":"Kattis","probNum":"powers","num":"B","publicDescId":98520,"publicDescVersion":1575083181000,"allDescBriefs":[{"id":98520,"updateDate":"2019-11-30","version":1575083181000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"1000 ms","Memory limit":"1048576 kB","OS":"Linux","Source":" \u003ca href\u003d\"https://open.kattis.com/problem-sources/The%202nd%20ProgNova%20Multi-University%20Programming%20Contest%20%282016%29\"\u003eThe 2nd ProgNova Multi-University Programming Contest (2016)\u003c/a\u003e","Author":" \u003ca href\u003d\"https://open.kattis.com/problem-authors/Haochen%20Chen\"\u003eHaochen Chen\u003c/a\u003e","License":" \u003ca rel\u003d\"license\" href\u003d\"https://creativecommons.org/licenses/by-sa/3.0/\" style\u003d\"vertical-align: middle;\"\u003e \u003cimg class\u003d\"problem-license\" alt\u003d\"Creative Commons License (cc by-sa)\" SRC\u003d\"https://vj.z180.cn/9f210cdd030c90615fab37b8125d28ab?v\u003d1575083180\"\u003e \u003c/a\u003e"},"weight":1},{"pid":10575,"title":"Euler Totient Function","oj":"SPOJ","probNum":"ETF","num":"C","publicDescId":6005,"publicDescVersion":1574592223000,"allDescBriefs":[{"id":6005,"updateDate":"2019-11-24","version":1574592223000,"author":"0","remarks":"Initialization."},{"id":15615,"updateDate":"2011-10-07","version":1317929745000,"author":"linkin","remarks":""}],"properties":{"Time limit":"161 ms","Memory limit":"1572864 kB","Code length Limit":"50000 B","OS":"Linux","Language limit":"All except: ERL JS-RHINO NODEJS PERL6 VB.NET","Author":"Race with time"},"weight":1},{"pid":2523753,"title":"Primes","oj":"Gym","probNum":"102267B","num":"D","publicDescId":115676,"publicDescVersion":1574966634000,"allDescBriefs":[{"id":115676,"updateDate":"2019-11-29","version":1574966634000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"1000 ms","Memory limit":"262144 kB","OS":"Windows","Source":"The 2019 University of Jordan Collegiate Programming Contest","Editorial":"\u003ca href\u003d\"https://codeforces.com/blog/entry/68150\" title\u003d\"68150\" target\u003d\"_blank\"\u003eAnnouncement (en)\u003c/a\u003e\n\u003ca href\u003d\"https://codeforces.com/blog/entry/68223\" title\u003d\"68223\" target\u003d\"_blank\"\u003eTutorial (en)\u003c/a\u003e"},"weight":1},{"pid":99013,"title":"Sorting Bank Accounts","oj":"SPOJ","probNum":"SBANK","num":"E","publicDescId":47748,"publicDescVersion":1574335601000,"allDescBriefs":[{"id":47748,"updateDate":"2019-11-21","version":1574335601000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"7000 ms","Memory limit":"1572864 kB","Code length Limit":"50000 B","OS":"Linux","Language limit":"All except: NODEJS PERL6 VB.NET","Source":"-","Author":"mima"},"weight":1},{"pid":35850,"title":"Happy Numbers","oj":"UVA","probNum":"944","num":"F","publicDescId":27578,"publicDescVersion":1575097737000,"allDescBriefs":[{"id":27578,"updateDate":"2019-11-30","version":1575097737000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"3000 ms","OS":"Linux"},"weight":1},{"pid":19117,"title":"Secret Research","oj":"UVA","probNum":"621","num":"G","publicDescId":11276,"publicDescVersion":1574918141000,"allDescBriefs":[{"id":11276,"updateDate":"2019-11-28","version":1574918141000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"3000 ms","OS":"Linux"},"weight":1},{"pid":858227,"title":"Prime Factors","oj":"SPOJ","probNum":"PFACT","num":"H","publicDescId":81804,"publicDescVersion":1575082574000,"allDescBriefs":[{"id":81804,"updateDate":"2019-11-30","version":1575082574000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"100 ms","Memory limit":"1572864 kB","Code length Limit":"5000 B","OS":"Linux","Language limit":"All except: ASM64","Author":"c[R]@zY f[R]0G"},"weight":1},{"pid":1869377,"title":"GCD and LCM","oj":"EOlymp","probNum":"1244","num":"I","publicDescId":105545,"publicDescVersion":1575136238000,"allDescBriefs":[{"id":105545,"updateDate":"2019-12-01","version":1575136238000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"1000 ms","Memory limit":"65536 kB"},"weight":1},{"pid":94543,"title":"Modular Equations","oj":"CodeForces","probNum":"495B","num":"J","publicDescId":47552,"publicDescVersion":1574195127000,"allDescBriefs":[{"id":47552,"updateDate":"2019-11-20","version":1574195127000,"author":"0","remarks":"Initialization."},{"id":121886,"updateDate":"2019-11-05","version":1572928589000,"author":"378440404","remarks":"Initialization."},{"id":97297,"updateDate":"2018-03-31","version":1522438412000,"author":"sagarsarker1230","remarks":"Initialization."}],"properties":{"Time limit":"1000 ms","Memory limit":"262144 kB","Source":"Codeforces Round #282 (Div. 2)","Tags":"math\nnumber theory\n*1600","Editorial":"\u003ca href\u003d\"http://codeforces.com/blog/entry/15134\" title\u003d\"Codeforces Round #282\" target\u003d\"_blank\"\u003eAnnouncement #1 (en)\u003c/a\u003e\n\u003ca href\u003d\"http://codeforces.com/blog/entry/15134\" title\u003d\"Codeforces Round #282\" target\u003d\"_blank\"\u003eAnnouncement #2 (ru)\u003c/a\u003e\n\u003ca href\u003d\"http://codeforces.com/blog/entry/15148\" title\u003d\"Tutorial\" target\u003d\"_blank\"\u003eTutorial (en)\u003c/a\u003e"},"weight":1},{"pid":360720,"title":"Euler Totient Function Depth","oj":"SPOJ","probNum":"ETFD","num":"K","publicDescId":62615,"publicDescVersion":1574966825000,"allDescBriefs":[{"id":62615,"updateDate":"2019-11-29","version":1574966825000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"2000 ms","Memory limit":"1572864 kB","Code length Limit":"50000 B","OS":"Linux","Language limit":"All except: ASM64 JS-MONKEY","Source":"ETF","Author":"[Lakshman]"},"weight":1},{"pid":28523,"title":"Invitation Cards","oj":"SPOJ","probNum":"INCARDS","num":"L","publicDescId":19971,"publicDescVersion":1575162135000,"allDescBriefs":[{"id":19971,"updateDate":"2019-12-01","version":1575162135000,"author":"0","remarks":"Initialization."}],"properties":{"Time limit":"559 ms","Memory limit":"1572864 kB","Code length Limit":"50000 B","OS":"Linux","Language limit":"All","Source":"ACM Central European Programming Contest, Prague 1998","Author":"adrian"},"weight":1}],"problemsHash":"ec63836f4d3f88d4ca648d4401f1dc37","privatePeerContestIds":[],"enableTimeMachine":true,"sumTime":true,"penalty":1200,"partialScore":false,"customizedWeight":false,"showPeers":false}</textarea>
+<script src="./MC621_MC821_13_09 - Virtual Judge_files/sdk.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./MC621_MC821_13_09 - Virtual Judge_files/sdk(1).js"></script><script async="" src="./MC621_MC821_13_09 - Virtual Judge_files/analytics.js"></script><script type="text/javascript">moduleName = "./contest/view/view";</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body-footer">
+    <div style="margin-bottom: 8px">
+        <a href="https://t.me/joinchat/Erw7nRGwXN3iSCoKguVW3w" target="_blank">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/telegram.svg">
+        </a>
+        <a href="https://www.facebook.com/virtualjudge/" target="_blank">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/facebook.svg">
+        </a>
+        <a href="https://weibo.com/u/5340553087" target="_blank">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/weibo.svg">
+        </a>
+        <a href="https://groups.google.com/forum/#!forum/virtual-judge" target="_blank">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/google_bookmark.svg">
+        </a>
+        <a href="https://twitter.com/virtualjudge" target="_blank">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/twitter.svg">
+        </a>
+        <a href="mailto:is.un@qq.com" target="_blank">
+            <img src="./MC621_MC821_13_09 - Virtual Judge_files/email.svg">
+        </a>
+    </div>
+    All Copyright Reserved © 2010-2019 <a href="mailto:is.un@qq.com">Xu Han</a><br>
+    Server Time: <span class="currentTimeTZ">2019-12-01 12:18:09 UTC-3</span>
+</div>
+
+<input name="version" type="hidden" value="1574939361867">
+
+    <input id="visitor_username" name="username" type="hidden" value="mc521721_2019">
+    <input id="visitor_userId" name="userId" type="hidden" value="276477">
+    <input id="visitor_sup" name="sup" type="hidden" value="0">
+    <input id="newMessage" name="newMessage" type="hidden" value="false">
+
+
+<span id="img-support" title="Feedback"></span>
+<script type="text/javascript">basePath = "";</script>
+<script type="text/javascript">imagesRoot = "/static/images";</script>
+<script src="./MC621_MC821_13_09 - Virtual Judge_files/loader.d41d8cd98f00b204e980.js"></script>
+<script src="./MC621_MC821_13_09 - Virtual Judge_files/vendor.b9bfabcdf34079f6c48b.js"></script>
+<script src="./MC621_MC821_13_09 - Virtual Judge_files/app.04906e975817f4982d41.js"></script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-13231844-2', 'auto');
+  
+  ga('set', 'userId', 'mc521721_2019');
+  
+  ga('send', 'pageview');
+</script>
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./MC621_MC821_13_09 - Virtual Judge_files/xd_arbiter.html" style="border: none;"></iframe></div></div></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+</body></html>
