@@ -1,68 +1,68 @@
-user,accepteds,out_time,rank,failed
-luizandia,4,0,,1
-andregoncalves,4,0,,1
-felipeemos,3,0,,0
-ggavena,0,0,,0
-wmartins,7,0,PRIMEIRO,0
-FerParedes,0,0,,0
-dominguilherme,4,0,,0
-guilhermehhs,3,0,,0
-anarequena,6,0,,0
-b164923,3,0,,0
+user,accepted,out_time,rank,failed
+LuizAndia,4,0,,8
+andregoncalves,4,0,,8
+FelipeEmos,3,0,,9
+ggavena,0,4,,8
+wmartins,7,0,PRIMEIRO,5
+FerParedes,0,5,,7
+dominguilherme,4,0,,8
+guilhermehhs,3,3,,6
+anarequena,6,0,,6
+b164923,3,0,,9
 <insira username vjudge aqui>,0,0,,0
-krautz,5,0,,0
-anaclarazs,6,0,,0
+krautz,5,0,,7
+AnaClaraZS,6,0,,6
 <insira username vjudge aqui>,0,0,,0
-brunoaf,2,0,,1
-guilhermetiaki,3,0,,0
-danieloliveira,1,0,,0
-hboschirolli,5,0,,0
+brunoaf,2,0,,10
+guilhermetiaki,3,0,,9
+danieloliveira,1,3,,8
+hboschirolli,5,0,,7
 <insira username vjudge aqui>,0,0,,0
-ericoimf,0,0,,0
-leandroafm21,5,0,,0
-gfrancioli,2,0,,1
-gabrielmsato,3,0,,0
+ericoimf,0,5,,7
+Leandroafm21,5,0,,7
+gfrancioli,2,0,,10
+gabrielmsato,3,0,,9
 <insira username vjudge aqui>,0,0,,0
-giocoutinho26,2,0,,0
-mihmosa,5,0,,0
-luizguilherme,5,0,,0
-gustavo_salibi,6,0,,1
-natrodrigues,5,0,,0
-joaopm,3,0,,1
+giocoutinho26,2,1,,9
+mihmosa,5,0,,7
+luizguilherme,5,0,,7
+Gustavo_Salibi,6,0,,6
+natrodrigues,5,0,,7
+joaopm,3,0,,9
 <insira username vjudge aqui>,0,0,,0
-victormaruca,4,1,,1
-<insira username vjudge aqui>,0,0,,0
-<insira username vjudge aqui>,0,0,,0
+victormaruca,4,1,,7
 <insira username vjudge aqui>,0,0,,0
 <insira username vjudge aqui>,0,0,,0
-marcoaurelio,2,1,,0
 <insira username vjudge aqui>,0,0,,0
-mjoaquim,4,0,,0
-barney_san,3,0,,0
-turing_burro,5,0,,0
-tiagodepalves,6,0,,2
 <insira username vjudge aqui>,0,0,,0
-vitoriadmp,4,0,,0
+MarcoAurelio,2,5,,5
 <insira username vjudge aqui>,0,0,,0
-erickkn,4,0,,0
-gabrielsantosrv,6,0,,1
+mjoaquim,4,0,,8
+barney_san,3,0,,9
+turing_burro,5,0,,7
+tiagodepalves,6,1,,5
 <insira username vjudge aqui>,0,0,,0
-vbs,5,0,,0
-joaoguilhermeas,4,0,,1
-JoaoFlores,0,0,,0
-lumagabinov,5,0,,0
-maviles,4,0,,0
-Pupo,0,0,,0
-pedromorelli96,4,0,,1
-vitormosso,2,0,,1
-fatayer,6,0,TERCEIRO,0
-alvaromarques,0,1,,0
-beatrizazanha,5,0,,0
-Fingerman,0,0,,0
-ieremies,6,0,SEGUNDO,1
-zanez,4,0,,1
+VitoriaDMP,4,1,,7
 <insira username vjudge aqui>,0,0,,0
-luizgustavo09,5,0,,0
+erickkn,4,0,,8
+gabrielsantosrv,6,0,,6
+<insira username vjudge aqui>,0,0,,0
+VBS,5,0,,7
+joaoguilhermeas,4,0,,8
+JoaoFlores,0,4,,8
+lumagabinov,5,0,,7
+maviles,4,0,,8
+Pupo,0,0,,12
+pedromorelli96,4,0,,8
+vitormosso,2,0,,10
+Fatayer,6,0,TERCEIRO,6
+AlvaroMarques,0,2,,10
+beatrizazanha,5,0,,7
+Fingerman,0,0,,12
+Ieremies,6,0,SEGUNDO,6
+Zanez,4,0,,8
+<insira username vjudge aqui>,0,0,,0
+luizgustavo09,5,2,,5
 <insira username vjudge aqui>,0,0,,0
 <insira username vjudge aqui>,0,0,,0
 <insira username vjudge aqui>,0,0,,0

@@ -6,6 +6,7 @@ from pprint import pprint
 import csv
 import datetime
 import requests 
+import json
 #current contest files
 contests = [
         'contests/MC621_MC821_01_11 - Virtual Judge.html',  
@@ -153,6 +154,7 @@ usernames_to_present = [
        '<insira username vjudge aqui>',
        '<insira username vjudge aqui>'
 ]
+
 #for each contest
 for contest in contests:
     #setup
@@ -160,55 +162,98 @@ for contest in contests:
     html =f.read()
     f.close()
     parsed_html = BeautifulSoup(html, from_encoding="utf-8")
-    students = [];    
-    #iterate over students
-    trs = parsed_html.body.find('table', attrs={'id': 'contest-rank-table' }).tbody.find_all('tr')
-    th = 1
-    for tr in trs:
-        student = {'failed': 0, 'rank': 0, 'out_time': 0}
-        contest_id = tr.get('c')
-        user_id = tr.get('u')        
-        if contest_id == None:
-            print(tr)
-            exit()
-        tds = tr.find_all('td')        
-        problem_letter = 'A'
-        for td in tds:
-            # get name
-            if td.div != None and td.div.a != None: 
-                student['user'] = td.div.a.find(text=True, recursive=False).rstrip().lower()
-            # get accepted question
-            classes = td.get('class')
-            if 'solved' in classes:
-                student['accepteds'] = td.a.text
-            if 'failed' in classes:
-                submissions_page = BeautifulSoup(requests.get(url = 'https://vjudge.net/contest/teamProblemStatus/'+contest_id+'?uid='+user_id+'&num='+problem_letter+'&afterContest=true', params = {}).text, from_encoding="utf-8")
-                if submissions_page.body.table.tbody.find('tr', attrs = {'class':'accepted'}) == None:
-                    student['failed'] += 1
+    students = {}
+    jsonData = json.loads(parsed_html.body.find('textarea', attrs = {'name' : "dataJson"}).text)
+    contest_id = jsonData['id']
+    n_problems = len(jsonData['problems'])
+    end_contest_time = jsonData['end']
+    print(contest)
+    #iterate over usernames
+    for username in usernames:
+        student = {
+                'user': username,
+                'failed': 0, 
+                'rank': 0, 
+                'out_time': 0, 
+                'accepted': 0
+                }
+        for problem in range(n_problems):
+            problem_letter = chr(ord('A') + problem)
+            #post request
+            columns = []
+            for i in range(9):
+                columns.append(
+                    {
+                        'data': i,
+                        'name': '',
+                        'searchable': True,
+                        'orderable': False,
+                        'search': {
+                            'value' : '',
+                            'regex': False
+                        },
+                    }
+                )
+            request = requests.post(
+                    url = 'https://vjudge.net/status/data/', 
+                    params = {
+                        'columns' : columns, 
+                        'start': 0,
+                        'length': 20,
+                        'search': {
+                            'value': '',
+                            'regex': False
+                            },
+                        'un': username,
+                        'num': problem_letter,
+                        'res': 1,
+                        'language': '',
+                        'inContest': True,
+                        'contestId': contest_id
+                        },
+                    headers = {
+                        'accept': 'application/json, text/javascript, */*; q=0.01',
+                        'accept-encoding': 'gzip, deflate, br',
+                        'accept-language': 'en-US,en;q=0.9',
+                        'cookie': '_ga=GA1.2.990671163.1570647124; _gid=GA1.2.52825728.1575479159; Jax.Q=mc521721_2019|Y9GT8VNDVOBDEPC9707ZV77OF4RCY4; JSESSIONID=27A6644053B7B0F22933CBC4DC2AE9E4; _gat=1',
+                        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                        'x-requested-with': 'XMLHttpRequest'
+                        }
+                ).text
+            response = json.loads(request)
+            if len(response['data']) == 0:
+                student['failed'] += 1
+            else:
+                valid = False
+                for accepted in response['data']:
+                    if accepted['time'] <= end_contest_time:
+                        valid = True
+                        break
+                if valid:
+                    student['accepted'] += 1
                 else:
                     student['out_time'] += 1
-            if 'prob' in classes:
-                problem_letter = chr(ord(problem_letter) + 1)
-        if 'user' in student:
-            for username in usernames:
-                if student['user'] == username.lower():
-                    student['rank'] = th
-                    students.append(student)
-                    th += 1
-                    break
-    pprint(students)
-    #sort values
-    students.sort(key= lambda val: usernames_order[val['user']] if val['user'] in usernames_order else 10000000)
+        students[username] = student
+    #get username rank
+    rows = parsed_html.body.find('table', attrs={'id': 'contest-rank-table' }).tbody.find_all('tr')
+    rank = 1
+    for row in rows:
+        if rank > 3:
+            break;
+        username = row.find('td', attrs={'class' : 'team'}).div.a.find(text=True, recursive=False).rstrip()
+        if username in students:
+            students[username]['rank'] = rank
+            rank += 1
     #write csv
     with open(contest.split('/')[1] + ".csv", mode='w') as csv_file:
-        fieldnames = ['user', 'accepteds', 'out_time', 'rank', 'failed']
+        fieldnames = ['user', 'accepted', 'out_time', 'rank', 'failed']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
         for username_to_present in usernames_to_present:
-            row = {'user':username_to_present, 'accepteds':0, 'out_time':0, 'rank':'', 'failed':0}
-            for student in students:
-                if student['user'] == username_to_present.lower():
-                    row = student
+            row = {'user':username_to_present, 'accepted':0, 'out_time':0, 'rank':'', 'failed':0}
+            for username in students:
+                if username == username_to_present:
+                    row = students[username]
                     if row['rank'] == 1:
                         row['rank'] = 'PRIMEIRO'
                     elif row['rank'] == 2:
@@ -219,4 +264,3 @@ for contest in contests:
                         row['rank'] = ''
                     break
             writer.writerow(row)
-
