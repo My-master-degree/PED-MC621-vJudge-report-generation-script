@@ -7,153 +7,36 @@ import csv
 import datetime
 import requests 
 import json
+#cookies session
+cookies = {
+        'Jax.Q': '',
+        '_gid': '',
+        'JSESSIONID': '',
+        '_ga': ''
+        }
 #current contest files
 contests = [
-        'contests/MC621_MC821_01_11 - Virtual Judge.html',  
-        'contests/MC621_MC821_16_08 - Virtual Judge.html',
-        'contests/MC621_MC821_02_08 - Virtual Judge.html',
-        'contests/MC621_MC821_18_10 - Virtual Judge.html',
-        'contests/MC621_MC821_04_10 - Virtual Judge.html',
-        'contests/MC621_MC821_20_09 - Virtual Judge.html',
-        'contests/MC621_MC821_06_09 - Virtual Judge.html',
-        'contests/MC621_MC821_22_11 - Virtual Judge.html',
         'contests/MC621_MC821_08_11 - Virtual Judge.html',
-        'contests/MC621_MC821_23_08 - Virtual Judge.html',
-        'contests/MC621_MC821_11_10 - Virtual Judge.html',
-        'contests/MC621_MC821_25_10 - Virtual Judge.html',
-        'contests/MC621_MC821_13_09 - Virtual Judge.html',
-        'contests/MC621_MC821_27_09 - Virtual Judge.html',
-        'contests/MC621_MC821_15_11 - Virtual Judge.html',
-        'contests/MC621_MC821_30_08 - Virtual Judge.html'
         ]
-#current sutends username order
+#current username order
 usernames = [
         'LuizAndia',
-        'andregoncalves',
-        'FelipeEmos',
-        'ggavena',
-        'wmartins',
-        'FerParedes',
-        'dominguilherme',
-        'guilhermehhs',
-        'anarequena',
         'b164923',
-        'krautz',
-        'AnaClaraZS',
-        'brunoaf',
-        'guilhermetiaki',
-        'danieloliveira',
         'hboschirolli',
-        'ericoimf',
-        'Leandroafm21',
-        'gfrancioli',
-        'gabrielmsato',
-        'giocoutinho26',
-        'mihmosa',
-        'luizguilherme',
-        'Gustavo_Salibi',
-        'natrodrigues',
-        'joaopm',
-        'victormaruca',
-        'MarcoAurelio',
-        'mjoaquim',
-        'barney_san',
-        'turing_burro',
-        'tiagodepalves',
-        'VitoriaDMP',
-        'erickkn',
-        'gabrielsantosrv',
-        'VBS',
-        'joaoguilhermeas',
-        'JoaoFlores',
-        'lumagabinov',
-        'maviles',
-        'Pupo',
-        'pedromorelli96',
-        'vitormosso',
-        'Fatayer',
-        'AlvaroMarques',
-        'beatrizazanha',
-        'Fingerman',
-        'Ieremies',
-        'Zanez',
-        'luizgustavo09',
         ];
+#usernames list to present
+usernames_to_present = [
+        '<null>',
+        'b164923',
+        'hboschirolli',
+        'LuizAndia',
+]
+
 usernames_order = {}
 order = 1
 for username in usernames:
     usernames_order[username] = order
     order += 1
-#usernames list to present
-usernames_to_present = [
-        'LuizAndia',
-        'andregoncalves',
-        'FelipeEmos',
-        'ggavena',
-        'wmartins',
-        'FerParedes',
-        'dominguilherme',
-        'guilhermehhs',
-        'anarequena',
-        'b164923',
-        '<insira username vjudge aqui>',
-        'krautz',
-        'AnaClaraZS',
-        '<insira username vjudge aqui>',
-        'brunoaf',
-        'guilhermetiaki',
-        'danieloliveira',
-        'hboschirolli',
-        '<insira username vjudge aqui>',
-        'ericoimf',
-        'Leandroafm21',
-        'gfrancioli',
-        'gabrielmsato',
-        '<insira username vjudge aqui>',
-        'giocoutinho26',
-        'mihmosa',
-        'luizguilherme',
-        'Gustavo_Salibi',
-        'natrodrigues',
-        'joaopm',
-        '<insira username vjudge aqui>',
-        'victormaruca',
-        '<insira username vjudge aqui>',
-        '<insira username vjudge aqui>',
-        '<insira username vjudge aqui>',
-        '<insira username vjudge aqui>',
-        'MarcoAurelio',
-        '<insira username vjudge aqui>',
-        'mjoaquim',
-        'barney_san',
-        'turing_burro',
-        'tiagodepalves',
-        '<insira username vjudge aqui>',
-        'VitoriaDMP',
-        '<insira username vjudge aqui>',
-        'erickkn',
-        'gabrielsantosrv',
-        '<insira username vjudge aqui>',
-        'VBS',
-        'joaoguilhermeas',
-'JoaoFlores',
-       'lumagabinov',
-       'maviles',
-       'Pupo',
-       'pedromorelli96',
-       'vitormosso',
-       'Fatayer',
-       'AlvaroMarques',
-       'beatrizazanha',
-       'Fingerman',
-       'Ieremies',
-       'Zanez',
-       '<insira username vjudge aqui>',
-       'luizgustavo09',
-       '<insira username vjudge aqui>',
-       '<insira username vjudge aqui>',
-       '<insira username vjudge aqui>'
-]
 
 #for each contest
 for contest in contests:
@@ -179,31 +62,12 @@ for contest in contests:
                 }
         for problem in range(n_problems):
             problem_letter = chr(ord('A') + problem)
-            #post request
-            columns = []
-            for i in range(9):
-                columns.append(
-                    {
-                        'data': i,
-                        'name': '',
-                        'searchable': True,
-                        'orderable': False,
-                        'search': {
-                            'value' : '',
-                            'regex': False
-                        },
-                    }
-                )
-            request = requests.post(
-                    url = 'https://vjudge.net/status/data/', 
+            #get request
+            request = requests.get(
+                    url = 'https://vjudge.net/status/data/',
                     params = {
-                        'columns' : columns, 
                         'start': 0,
                         'length': 20,
-                        'search': {
-                            'value': '',
-                            'regex': False
-                            },
                         'un': username,
                         'num': problem_letter,
                         'res': 1,
@@ -215,7 +79,7 @@ for contest in contests:
                         'accept': 'application/json, text/javascript, */*; q=0.01',
                         'accept-encoding': 'gzip, deflate, br',
                         'accept-language': 'en-US,en;q=0.9',
-                        'cookie': '_ga=GA1.2.990671163.1570647124; _gid=GA1.2.52825728.1575479159; Jax.Q=mc521721_2019|Y9GT8VNDVOBDEPC9707ZV77OF4RCY4; JSESSIONID=27A6644053B7B0F22933CBC4DC2AE9E4; _gat=1',
+                        'cookie': "_ga="+cookies['_ga']+"; _gid="+cookies['_gid']+"; Jax.Q="+cookies['Jax.Q']+"; JSESSIONID="+cookies['JSESSIONID']+"; _gat=1",
                         'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
                         'x-requested-with': 'XMLHttpRequest'
                         }
@@ -226,7 +90,7 @@ for contest in contests:
             else:
                 valid = False
                 for accepted in response['data']:
-                    if accepted['time'] <= end_contest_time:
+                    if accepted['time'] <= end_contest_time and accepted['userName'] == student['user']:
                         valid = True
                         break
                 if valid:
@@ -255,11 +119,11 @@ for contest in contests:
                 if username == username_to_present:
                     row = students[username]
                     if row['rank'] == 1:
-                        row['rank'] = 'PRIMEIRO'
+                        row['rank'] = 'FIRST'
                     elif row['rank'] == 2:
-                        row['rank'] = 'SEGUNDO'
+                        row['rank'] = 'SECOND'
                     elif row['rank'] == 3:
-                        row['rank'] = 'TERCEIRO'
+                        row['rank'] = 'THIRD'
                     else:
                         row['rank'] = ''
                     break
