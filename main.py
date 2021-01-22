@@ -7,6 +7,17 @@ import csv
 import datetime
 import requests 
 import json
+import sys
+
+VERBOSE = False
+
+#get command line args
+n_args = len(sys.argv)
+for i in range(1, n_args):
+    print(sys.argv[i], )
+    if sys.argv[i] == "--verbose":
+        VERBOSE = True
+
 #cookies session
 cookies = {
         'Jax.Q': '',
@@ -53,6 +64,8 @@ for contest in contests:
     print(contest)
     #iterate over usernames
     for username in usernames:
+        if VERBOSE:
+            print("\t", username)
         student = {
                 'user': username,
                 'failed': 0, 
@@ -62,6 +75,8 @@ for contest in contests:
                 }
         for problem in range(n_problems):
             problem_letter = chr(ord('A') + problem)
+            if VERBOSE:
+                print("\t", problem_letter)
             #get request
             request = requests.get(
                     url = 'https://vjudge.net/status/data/',
@@ -90,7 +105,7 @@ for contest in contests:
             else:
                 valid = False
                 for accepted in response['data']:
-                    if accepted['time'] <= end_contest_time and accepted['userName'] == student['user']:
+                    if accepted['time'] <= end_contest_time and accepted['userName'].lower() == student['user'].lower():
                         valid = True
                         break
                 if valid:

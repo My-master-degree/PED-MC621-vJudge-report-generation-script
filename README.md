@@ -50,6 +50,8 @@ Fill this array with the vJudge contests usernames.
 
 8. Now, run *python main.py* and open the generated *.csv*.
 
+  8.1. Case you want to see the program logs while it runs, you can run with the verbose argument (*python main.py --verbose*).
+
 ![Generated CSV](doc/img5.png "Generated CSV")
 
 Any doubts feel yourself free to reach me out: m228117@dac.unicamp.br
